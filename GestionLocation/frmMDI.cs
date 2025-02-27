@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GestionLocation.View;
 
 namespace GestionLocation
 {
@@ -89,5 +88,26 @@ namespace GestionLocation
             f.Show();
             f.WindowState = FormWindowState.Maximized;
         }
+
+        private void modePaiementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmModePaiement f = new frmModePaiement();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+
+        }
+
+        private void paiementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmPaiement f = new frmPaiement();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
+
+        
     }
 }

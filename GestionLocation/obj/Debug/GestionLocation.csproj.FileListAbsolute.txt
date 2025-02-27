@@ -70,3 +70,5 @@ C:\Users\mckas\source\repos\GestionLocation\GestionLocation\bin\Debug\CrystalDec
 C:\Users\mckas\source\repos\GestionLocation\GestionLocation\bin\Debug\stdole.dll
 C:\Users\mckas\source\repos\GestionLocation\GestionLocation\obj\Debug\GestionLocation.View.frmPrintListeProprietaire.resources
 C:\Users\mckas\source\repos\GestionLocation\GestionLocation\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\mckas\source\repos\GestionLocation\GestionLocation\obj\Debug\GestionLocation.View.frmModePaiement.resources
+C:\Users\mckas\source\repos\GestionLocation\GestionLocation\obj\Debug\GestionLocation.View.frmPaiement.resources

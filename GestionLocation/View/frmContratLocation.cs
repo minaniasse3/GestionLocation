@@ -19,6 +19,25 @@ namespace GestionLocation.View
         }
 
         BdAppartementContext db = new BdAppartementContext();
+        private ContratLocation contratActuel;
+        private void ResetForm()
+        {
+            txtNumero.Text = string.Empty;
+            txtDateDebut.Text = string.Empty;
+            txtDateFin.Text = string.Empty;
+            txtMontant.Text = string.Empty;
+            cbbAppartement.DataSource = LoadCbbAppartement().ToList();
+            cbbLocataire.DataSource = LoadCbbLocataire().ToList();
+            cbbAppartement.DisplayMember = "Text";
+            cbbAppartement.ValueMember = "Value";
+            cbbAppartement.SelectedIndex = -1;
+            cbbLocataire.DisplayMember = "Text";
+            cbbLocataire.ValueMember = "Value";
+            cbbLocataire.SelectedIndex = -1;
+            dgLocataire.DataSource = db.ContratLocations.Select(a => new { a.IdContrat,a.IdAppartement, a.Appartement.AdresseAppartement, a.Numero, a.DateDebut, a.DateFin, a.Montant, a.IdLocataire, a.Locataire.NomPrenom, }).ToList();
+            txtNumero.Focus();
+        }
+
 
         public string Appartement;
 
@@ -26,7 +45,104 @@ namespace GestionLocation.View
 
         private void frmContratLocation_Load(object sender, EventArgs e)
         {
-            lblAppartement.Text = Appartement; 
+            lblAppartement.Text = Appartement;
+            ChargerStatuts();
+            ResetForm();
         }
+
+        private List<ListSelectionViewModel> LoadCbbAppartement()
+        {
+            var liste = db.appartements.ToList();
+
+
+            List<ListSelectionViewModel> list = new List<ListSelectionViewModel>();
+            ListSelectionViewModel a = new ListSelectionViewModel();
+            a.Text = "Selectionnez...";
+            a.Value = string.Empty;
+            list.Add(a);
+
+            foreach (var item in liste)
+            {
+                ListSelectionViewModel b = new ListSelectionViewModel();
+                b.Text = item.AdresseAppartement;
+                b.Value = item.IdAppartement.ToString();
+                list.Add(b);
+            }
+            return list;
+        }
+
+        private List<ListSelectionViewModel> LoadCbbLocataire()
+        {
+            var liste = db.locataires.ToList();
+
+
+            List<ListSelectionViewModel> list = new List<ListSelectionViewModel>();
+            ListSelectionViewModel a = new ListSelectionViewModel();
+            a.Text = "Selectionnez...";
+            a.Value = string.Empty;
+            list.Add(a);
+
+            foreach (var item in liste)
+            {
+                ListSelectionViewModel b = new ListSelectionViewModel();
+                b.Text = item.NomPrenom;
+                b.Value = item.IdPersonne.ToString();
+                list.Add(b);
+            }
+            return list;
+        }
+
+        private void ChargerStatuts()
+        {
+            cbbStatut.Items.AddRange(new string[] { "Selectionnez...","En attente", "Validé", "Révoqué" });
+        }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            contratActuel = new ContratLocation
+            {
+                Numero = txtNumero.Text,
+                DateDebut = txtDateDebut.Value,
+                DateFin = txtDateFin.Value,
+                Montant = float.Parse(txtMontant.Text),
+                Statut = cbbStatut.SelectedItem.ToString(),
+                IdAppartement = (int)cbbAppartement.SelectedValue,
+                IdLocataire = (int)cbbLocataire.SelectedValue,
+                DateCreation = DateTime.Now
+            };
+
+            db.ContratLocations.Add(contratActuel);
+            db.SaveChanges();
+            MessageBox.Show("Contrat enregistré avec succès !");
+            this.Close();
+        }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            if (contratActuel == null)
+            {
+                MessageBox.Show("Veuillez d'abord enregistrer un contrat.");
+                return;
+            }
+
+            contratActuel.Statut = "Validé";
+            db.SaveChanges();
+            MessageBox.Show("Contrat validé !");
+        }
+
+        private void btnRevoquer_Click(object sender, EventArgs e)
+        {
+            if (contratActuel == null)
+            {
+                MessageBox.Show("Veuillez d'abord enregistrer un contrat.");
+                return;
+            }
+
+            contratActuel.Statut = "Révoqué";
+            db.SaveChanges();
+            MessageBox.Show("Contrat révoqué !");
+        }
+
+       
     }
 }

@@ -120,5 +120,7 @@ namespace GestionLocation.View
             frm.Appartement = string.Format("Adresse");
             frm.Show();
         }
+
+        
     }
 }

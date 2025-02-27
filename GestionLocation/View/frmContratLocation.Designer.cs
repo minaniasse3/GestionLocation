@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnChoisir = new System.Windows.Forms.Button();
-            this.btnSupprimer = new System.Windows.Forms.Button();
-            this.btnModifier = new System.Windows.Forms.Button();
-            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnRevoquer = new System.Windows.Forms.Button();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.btnEnregistrer = new System.Windows.Forms.Button();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.Montant = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +43,11 @@
             this.txtDateDebut = new System.Windows.Forms.DateTimePicker();
             this.txtDateFin = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbbModePaiement = new System.Windows.Forms.ComboBox();
+            this.cbbAppartement = new System.Windows.Forms.ComboBox();
+            this.cbbLocataire = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbbStatut = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgLocataire)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,32 +60,35 @@
             this.btnChoisir.Text = "&Choisir";
             this.btnChoisir.UseVisualStyleBackColor = true;
             // 
-            // btnSupprimer
+            // btnRevoquer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(284, 473);
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(111, 23);
-            this.btnSupprimer.TabIndex = 40;
-            this.btnSupprimer.Text = "&Revoquer";
-            this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnRevoquer.Location = new System.Drawing.Point(280, 566);
+            this.btnRevoquer.Name = "btnRevoquer";
+            this.btnRevoquer.Size = new System.Drawing.Size(111, 23);
+            this.btnRevoquer.TabIndex = 40;
+            this.btnRevoquer.Text = "&Revoquer";
+            this.btnRevoquer.UseVisualStyleBackColor = true;
+            this.btnRevoquer.Click += new System.EventHandler(this.btnRevoquer_Click);
             // 
-            // btnModifier
+            // btnValider
             // 
-            this.btnModifier.Location = new System.Drawing.Point(148, 473);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(111, 23);
-            this.btnModifier.TabIndex = 39;
-            this.btnModifier.Text = "&Valider";
-            this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnValider.Location = new System.Drawing.Point(144, 566);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(111, 23);
+            this.btnValider.TabIndex = 39;
+            this.btnValider.Text = "&Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
-            // btnAjouter
+            // btnEnregistrer
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(12, 473);
-            this.btnAjouter.Name = "btnAjouter";
-            this.btnAjouter.Size = new System.Drawing.Size(111, 23);
-            this.btnAjouter.TabIndex = 37;
-            this.btnAjouter.Text = "&Enregistrer";
-            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Location = new System.Drawing.Point(8, 566);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(111, 23);
+            this.btnEnregistrer.TabIndex = 37;
+            this.btnEnregistrer.Text = "&Enregistrer";
+            this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // txtMontant
             // 
@@ -136,13 +143,13 @@
             // dgLocataire
             // 
             this.dgLocataire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLocataire.Location = new System.Drawing.Point(465, 12);
+            this.dgLocataire.Location = new System.Drawing.Point(429, 12);
             this.dgLocataire.Name = "dgLocataire";
             this.dgLocataire.RowHeadersWidth = 51;
             this.dgLocataire.RowTemplate.Height = 24;
-            this.dgLocataire.Size = new System.Drawing.Size(363, 648);
+            this.dgLocataire.Size = new System.Drawing.Size(1455, 648);
             this.dgLocataire.TabIndex = 28;
-           // 
+            // 
             // lblAppartement
             // 
             this.lblAppartement.AutoSize = true;
@@ -173,33 +180,71 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 373);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 45;
-            this.label4.Text = "Mode de paiement";
+            this.label4.Text = "Appartement";
             // 
-            // cbbModePaiement
+            // cbbAppartement
             // 
-            this.cbbModePaiement.FormattingEnabled = true;
-            this.cbbModePaiement.Location = new System.Drawing.Point(12, 392);
-            this.cbbModePaiement.Name = "cbbModePaiement";
-            this.cbbModePaiement.Size = new System.Drawing.Size(320, 24);
-            this.cbbModePaiement.TabIndex = 46;
+            this.cbbAppartement.FormattingEnabled = true;
+            this.cbbAppartement.Location = new System.Drawing.Point(12, 392);
+            this.cbbAppartement.Name = "cbbAppartement";
+            this.cbbAppartement.Size = new System.Drawing.Size(320, 24);
+            this.cbbAppartement.TabIndex = 46;
+            // 
+            // cbbLocataire
+            // 
+            this.cbbLocataire.FormattingEnabled = true;
+            this.cbbLocataire.Location = new System.Drawing.Point(17, 458);
+            this.cbbLocataire.Name = "cbbLocataire";
+            this.cbbLocataire.Size = new System.Drawing.Size(320, 24);
+            this.cbbLocataire.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 439);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Locataire";
+            // 
+            // cbbStatut
+            // 
+            this.cbbStatut.FormattingEnabled = true;
+            this.cbbStatut.Location = new System.Drawing.Point(17, 522);
+            this.cbbStatut.Name = "cbbStatut";
+            this.cbbStatut.Size = new System.Drawing.Size(320, 24);
+            this.cbbStatut.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 503);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 16);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Statut";
             // 
             // frmContratLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 672);
+            this.ClientSize = new System.Drawing.Size(1924, 672);
             this.ControlBox = false;
-            this.Controls.Add(this.cbbModePaiement);
+            this.Controls.Add(this.cbbStatut);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbbLocataire);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbbAppartement);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDateFin);
             this.Controls.Add(this.txtDateDebut);
             this.Controls.Add(this.lblAppartement);
             this.Controls.Add(this.btnChoisir);
-            this.Controls.Add(this.btnSupprimer);
-            this.Controls.Add(this.btnModifier);
-            this.Controls.Add(this.btnAjouter);
+            this.Controls.Add(this.btnRevoquer);
+            this.Controls.Add(this.btnValider);
+            this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.txtMontant);
             this.Controls.Add(this.Montant);
             this.Controls.Add(this.label3);
@@ -219,9 +264,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnChoisir;
-        private System.Windows.Forms.Button btnSupprimer;
-        private System.Windows.Forms.Button btnModifier;
-        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.Button btnRevoquer;
+        private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.TextBox txtMontant;
         private System.Windows.Forms.Label Montant;
         private System.Windows.Forms.Label label3;
@@ -233,6 +278,10 @@
         private System.Windows.Forms.DateTimePicker txtDateDebut;
         private System.Windows.Forms.DateTimePicker txtDateFin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbbModePaiement;
+        private System.Windows.Forms.ComboBox cbbAppartement;
+        private System.Windows.Forms.ComboBox cbbLocataire;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbbStatut;
+        private System.Windows.Forms.Label label6;
     }
 }
