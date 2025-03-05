@@ -108,6 +108,13 @@ namespace GestionLocation
             f.WindowState = FormWindowState.Maximized;
         }
 
-        
+        private void utilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fermer();
+            frmUtilisateur f = new frmUtilisateur();
+            f.MdiParent = this;
+            f.Show();
+            f.WindowState = FormWindowState.Maximized;
+        }
     }
 }

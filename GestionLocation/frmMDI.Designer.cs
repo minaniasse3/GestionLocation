@@ -38,6 +38,8 @@
             this.locataireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modePaiementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paiementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.securiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actionToolStripMenuItem,
-            this.parametreToolStripMenuItem});
+            this.parametreToolStripMenuItem,
+            this.securiteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 31);
@@ -93,37 +96,52 @@
             // proprietaireToolStripMenuItem
             // 
             this.proprietaireToolStripMenuItem.Name = "proprietaireToolStripMenuItem";
-            this.proprietaireToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
+            this.proprietaireToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.proprietaireToolStripMenuItem.Text = "Proprietaire";
             this.proprietaireToolStripMenuItem.Click += new System.EventHandler(this.proprietaireToolStripMenuItem_Click_1);
             // 
             // appartementToolStripMenuItem
             // 
             this.appartementToolStripMenuItem.Name = "appartementToolStripMenuItem";
-            this.appartementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
+            this.appartementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.appartementToolStripMenuItem.Text = "Appartement";
             this.appartementToolStripMenuItem.Click += new System.EventHandler(this.appartementToolStripMenuItem_Click);
             // 
             // locataireToolStripMenuItem
             // 
             this.locataireToolStripMenuItem.Name = "locataireToolStripMenuItem";
-            this.locataireToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
+            this.locataireToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.locataireToolStripMenuItem.Text = "Locataire";
             this.locataireToolStripMenuItem.Click += new System.EventHandler(this.locataireToolStripMenuItem_Click);
             // 
             // modePaiementToolStripMenuItem
             // 
             this.modePaiementToolStripMenuItem.Name = "modePaiementToolStripMenuItem";
-            this.modePaiementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
+            this.modePaiementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.modePaiementToolStripMenuItem.Text = "ModePaiement";
             this.modePaiementToolStripMenuItem.Click += new System.EventHandler(this.modePaiementToolStripMenuItem_Click);
             // 
             // paiementToolStripMenuItem
             // 
             this.paiementToolStripMenuItem.Name = "paiementToolStripMenuItem";
-            this.paiementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
+            this.paiementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.paiementToolStripMenuItem.Text = "Paiement";
             this.paiementToolStripMenuItem.Click += new System.EventHandler(this.paiementToolStripMenuItem_Click);
+            // 
+            // securiteToolStripMenuItem
+            // 
+            this.securiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.utilisateurToolStripMenuItem});
+            this.securiteToolStripMenuItem.Name = "securiteToolStripMenuItem";
+            this.securiteToolStripMenuItem.Size = new System.Drawing.Size(80, 27);
+            this.securiteToolStripMenuItem.Text = "Securite";
+            // 
+            // utilisateurToolStripMenuItem
+            // 
+            this.utilisateurToolStripMenuItem.Name = "utilisateurToolStripMenuItem";
+            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.utilisateurToolStripMenuItem.Text = "Utilisateur";
+            this.utilisateurToolStripMenuItem.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
             // 
             // frmMDI
             // 
@@ -156,5 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem locataireToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modePaiementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paiementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem securiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilisateurToolStripMenuItem;
     }
 }
