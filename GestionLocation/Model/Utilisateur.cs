@@ -9,15 +9,15 @@ namespace GestionLocation.Model
 {
     public class Utilisateur : Personne
     {
-        [Required, MaxLength(20)]
+        [ MaxLength(20)]
 
         public string Identiant { get; set; }
 
-        [Required, MaxLength(512)]
+        [MaxLength(512)]
 
         public string MotDePasse{ get; set; }
 
-        [Required, MaxLength(20)]
+        [ MaxLength(20)]
 
         public string Statut { get; set; }
     }

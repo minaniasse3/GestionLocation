@@ -16,16 +16,22 @@ namespace GestionLocation.View
     public partial class frmResetPassword : Form
     {
         public int idUser;
-        BdAppartementContext db = new BdAppartementContext();
+ 
         public frmResetPassword()
         {
             InitializeComponent();
 
         }
+        BdAppartementContext db = new BdAppartementContext();
+
+        private void btnQuiter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            if (txtMotdepasse.Text == txtConfirmermotdepasse.Text )
+            if (txtMotdepasse.Text == txtConfirmermotdepasse.Text)
             {
                 var leUser = db.Utilisateurs.Find(idUser);
                 if (leUser != null)
@@ -40,19 +46,13 @@ namespace GestionLocation.View
                     frmMDI f = new frmMDI();
                     f.Show();
                     this.Close();
-                }
-                
 
+                }
             }
             else
             {
                 MessageBox.Show("les mots de passe ne sont pas idantique");
             }
-        }
-
-        private void btnQuiter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

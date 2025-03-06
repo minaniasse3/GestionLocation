@@ -141,6 +141,7 @@
     <Compile Include="Model\ModePaiement.cs" />
     <Compile Include="Model\Paiement.cs" />
     <Compile Include="Model\Personne.cs" />
+    <Compile Include="Model\Profil.cs" />
     <Compile Include="Model\Proprietaire.cs" />
     <Compile Include="Model\ReportListeProprietaire.cs" />
     <Compile Include="Model\Td_Erreur.cs" />

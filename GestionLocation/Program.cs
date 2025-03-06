@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionLocation.Model;
 
 namespace GestionLocation
 {
@@ -16,7 +17,25 @@ namespace GestionLocation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           CreateAdmin();
             Application.Run(new frmSeConnecter());
+        }
+
+        static void CreateAdmin()
+        {
+            BdAppartementContext db = new BdAppartementContext();
+            var admin = db.Admins.FirstOrDefault();
+            if (admin == null)
+            {
+                admin = new Admin();
+                admin.NomPrenom = "Administrateur";
+                admin.Telephone = "784577474";
+                admin.Identiant = "Admin";
+                admin.Email = "admin@yopmail.com";
+                admin.CNI = "0101010111";
+                db.Admins.Add(admin);
+                db.SaveChanges();
+            }
         }
     }
 }

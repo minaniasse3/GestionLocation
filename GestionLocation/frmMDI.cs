@@ -13,6 +13,8 @@ namespace GestionLocation
 {
     public partial class frmMDI : Form
     {
+        public string profil;
+
         public frmMDI()
         {
             InitializeComponent();
@@ -115,6 +117,19 @@ namespace GestionLocation
             f.MdiParent = this;
             f.Show();
             f.WindowState = FormWindowState.Maximized;
+        }
+
+        private void frmMDI_Load(object sender, EventArgs e)
+        {
+            if (profil == "Admin")
+            {
+                parametreToolStripMenuItem.Visible = false ;
+            }
+            else if (profil =="Gestionnaire")
+            {
+                securiteToolStripMenuItem.Visible = false;
+
+            }
         }
     }
 }

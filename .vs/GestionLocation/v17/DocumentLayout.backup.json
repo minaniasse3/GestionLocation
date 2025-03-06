@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\view\\frmutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\model\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\model\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|c:\\users\\mckas\\source\\repos\\gestionlocation\\gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmresetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmproprietaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmproprietaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmresetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\view\\frmresetpassword.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|solutionrelative:gestionlocation\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F7DFA2A-4118-4833-A9E8-8CA40BAA5835}|GestionLocation\\GestionLocation.csproj|C:\\Users\\mckas\\source\\repos\\GestionLocation\\gestionlocation\\view\\frmproprietaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,24 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Form1.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\Form1.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Form1.cs",
-              "RelativeToolTip": "GestionLocation\\Form1.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwEwAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmResetPassword.cs",
+              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.cs",
+              "RelativeDocumentMoniker": "GestionLocation\\View\\frmResetPassword.cs",
+              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.cs",
+              "RelativeToolTip": "GestionLocation\\View\\frmResetPassword.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:57:38.928Z",
+              "WhenOpened": "2025-03-05T03:28:32.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "frmResetPassword.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.cs",
               "RelativeDocumentMoniker": "GestionLocation\\View\\frmResetPassword.cs",
@@ -88,19 +72,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Utilisateur.cs",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Model\\Utilisateur.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\Model\\Utilisateur.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Model\\Utilisateur.cs",
-              "RelativeToolTip": "GestionLocation\\Model\\Utilisateur.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA0AAAAfAAAAAAAAAA==",
+              "Title": "frmResetPassword.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.Designer.cs",
+              "RelativeDocumentMoniker": "GestionLocation\\View\\frmResetPassword.Designer.cs",
+              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.Designer.cs",
+              "RelativeToolTip": "GestionLocation\\View\\frmResetPassword.Designer.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T01:43:54.484Z",
+              "WhenOpened": "2025-03-05T20:04:44.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "frmProprietaire.cs",
               "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmProprietaire.cs",
               "RelativeDocumentMoniker": "GestionLocation\\View\\frmProprietaire.cs",
@@ -113,69 +97,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmUtilisateur.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmUtilisateur.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\View\\frmUtilisateur.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmUtilisateur.cs [Design]*",
-              "RelativeToolTip": "GestionLocation\\View\\frmUtilisateur.cs [Design]*",
+              "DocumentIndex": 3,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Model\\Admin.cs",
+              "RelativeDocumentMoniker": "GestionLocation\\Model\\Admin.cs",
+              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Model\\Admin.cs",
+              "RelativeToolTip": "GestionLocation\\Model\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:31:22.041Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmUtilisateur.cs",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmUtilisateur.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\View\\frmUtilisateur.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmUtilisateur.cs*",
-              "RelativeToolTip": "GestionLocation\\View\\frmUtilisateur.cs*",
-              "ViewState": "AgIAABQAAAAAAAAAAAD4vyUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:43:03.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmResetPassword.cs",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\View\\frmResetPassword.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmResetPassword.cs",
-              "RelativeToolTip": "GestionLocation\\View\\frmResetPassword.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:28:32.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T16:34:11.098Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Form1.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\Form1.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\Form1.cs [Design]",
-              "RelativeToolTip": "GestionLocation\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:57:03.415Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmProprietaire.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmProprietaire.cs",
-              "RelativeDocumentMoniker": "GestionLocation\\View\\frmProprietaire.cs",
-              "ToolTip": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmProprietaire.cs [Design]",
-              "RelativeToolTip": "GestionLocation\\View\\frmProprietaire.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T17:33:56.117Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "frmPrintListeProprietaire.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmPrintListeProprietaire.cs",
               "RelativeDocumentMoniker": "GestionLocation\\View\\frmPrintListeProprietaire.cs",
@@ -186,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "frmPaiement.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmPaiement.cs",
               "RelativeDocumentMoniker": "GestionLocation\\View\\frmPaiement.cs",
@@ -197,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "frmModePaiement.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mckas\\source\\repos\\GestionLocation\\GestionLocation\\View\\frmModePaiement.cs",
               "RelativeDocumentMoniker": "GestionLocation\\View\\frmModePaiement.cs",

@@ -16,11 +16,12 @@ namespace GestionLocation
 {
     public partial class frmSeConnecter : Form
     {
-        BdAppartementContext db = new BdAppartementContext();
+      
         public frmSeConnecter()
         {
             InitializeComponent();
         }
+        BdAppartementContext db = new BdAppartementContext();
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,27 +43,44 @@ namespace GestionLocation
 
             //Helper.WriteLogSystem("frmSeConnecter-btnSeConnecter_Click", "Bienvenue");
             GMailer.sendMail("mamecoumbakasse5@gmail.com", "text", "test envoie email");
+            //frmMDI f = new frmMDI();
+            //f.Show();
+            //this.Hide();
             try
             {
-            var luser = db.Utilisateurs.Where(a => a.Identiant.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
-                if (luser!=null)
+                var luser = db.Utilisateurs.Where(a => a.Identiant.ToLower() == txtIdentifiant.Text.ToLower()).FirstOrDefault();
+                if (luser != null)
                 {
                     string hash = luser.MotDePasse;
                     using (MD5 md5Hash = MD5.Create())
                     {
-                        if ((CryptApp.VerifyMd5Hash(md5Hash, txtMotdepasse.Text, hash))|| luser.MotDePasse.TEXT
+                        if ((CryptApp.VerifyMd5Hash(md5Hash, txtMotdepasse.Text, hash)) || (luser.MotDePasse == null))
                         {
-                            if (luser.Statut==null)
+                            if (luser.Statut == null)
                             {
                                 frmResetPassword f = new frmResetPassword();
                                 f.idUser = luser.IdPersonne;
                                 f.Show();
                                 this.Hide();
-                                
-                            }else if (luser.Statut=="Enabled")
+
+                            }
+                            else if (luser.Statut == "Enabled")
                             {
 
                                 frmMDI f = new frmMDI();
+                                var le = db.Admins.Find((luser.IdPersonne));
+                                if (le!=null)
+                                {
+                                    f.profil = "Admin";
+                                }
+                                else
+                                {
+                                    var leGes = db.Gestionnaires.Find(luser.IdPersonne);
+                                    if (le != null)
+                                    {
+                                        f.profil = "Gestionnaire";
+                                    }
+                                }
                                 f.Show();
                                 this.Hide();
                             }
@@ -81,9 +99,9 @@ namespace GestionLocation
                 }
 
             }
-            catch (Exception ex) {
-                MessageBox.Show("Erreur : " + ex.Message);
-
+            catch (Exception ex)
+            {
+                // todo: log
             }
 
 

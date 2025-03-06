@@ -34,9 +34,8 @@ namespace GestionLocation.View
                     ut.Identiant = txtIdentifiant.Text; 
                     ut.Telephone = txtTel.Text;
                     ut.Ninea = txtNinea.Text;
-                    ut.Rccm= txtRccm.Text;
-                    //ut.Statut = "Actif";
-
+                    ut.Rccm = txtRccm.Text;
+                    ut.Statut = "actif";
                     db.Utilisateurs.Add(ut);
                     db.SaveChanges();
                     ResetForm();
@@ -55,8 +54,6 @@ namespace GestionLocation.View
             txtIdentifiant.Text = string.Empty;
             txtTel.Text = string.Empty;
             txtNomPrenom.Text = string.Empty;
-            txtNinea.Text = string.Empty;
-            txtRccm.Text = string.Empty;
             dgUtilisateur.DataSource = db.Utilisateurs.Select(a => new { a.IdPersonne, a.NomPrenom, a.Telephone, a.CNI, a.Email }).ToList();
             txtNomPrenom.Focus();
         }
@@ -88,8 +85,6 @@ namespace GestionLocation.View
             txtEmail.Text = dgUtilisateur.CurrentRow.Cells[3].Value.ToString();
             txtCNI.Text = dgUtilisateur.CurrentRow.Cells[4].Value.ToString();
             txtIdentifiant.Text = dgUtilisateur.CurrentRow.Cells[5].Value.ToString();
-            txtNinea.Text = dgUtilisateur.CurrentRow.Cells[6].Value.ToString();
-            txtRccm.Text = dgUtilisateur.CurrentRow.Cells[7].Value.ToString();
         }
 
         private void btnModifier_Click(object sender, EventArgs e)

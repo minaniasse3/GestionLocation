@@ -96,35 +96,35 @@
             // proprietaireToolStripMenuItem
             // 
             this.proprietaireToolStripMenuItem.Name = "proprietaireToolStripMenuItem";
-            this.proprietaireToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.proprietaireToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
             this.proprietaireToolStripMenuItem.Text = "Proprietaire";
             this.proprietaireToolStripMenuItem.Click += new System.EventHandler(this.proprietaireToolStripMenuItem_Click_1);
             // 
             // appartementToolStripMenuItem
             // 
             this.appartementToolStripMenuItem.Name = "appartementToolStripMenuItem";
-            this.appartementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.appartementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
             this.appartementToolStripMenuItem.Text = "Appartement";
             this.appartementToolStripMenuItem.Click += new System.EventHandler(this.appartementToolStripMenuItem_Click);
             // 
             // locataireToolStripMenuItem
             // 
             this.locataireToolStripMenuItem.Name = "locataireToolStripMenuItem";
-            this.locataireToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.locataireToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
             this.locataireToolStripMenuItem.Text = "Locataire";
             this.locataireToolStripMenuItem.Click += new System.EventHandler(this.locataireToolStripMenuItem_Click);
             // 
             // modePaiementToolStripMenuItem
             // 
             this.modePaiementToolStripMenuItem.Name = "modePaiementToolStripMenuItem";
-            this.modePaiementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.modePaiementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
             this.modePaiementToolStripMenuItem.Text = "ModePaiement";
             this.modePaiementToolStripMenuItem.Click += new System.EventHandler(this.modePaiementToolStripMenuItem_Click);
             // 
             // paiementToolStripMenuItem
             // 
             this.paiementToolStripMenuItem.Name = "paiementToolStripMenuItem";
-            this.paiementToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.paiementToolStripMenuItem.Size = new System.Drawing.Size(204, 28);
             this.paiementToolStripMenuItem.Text = "Paiement";
             this.paiementToolStripMenuItem.Click += new System.EventHandler(this.paiementToolStripMenuItem_Click);
             // 
@@ -139,7 +139,7 @@
             // utilisateurToolStripMenuItem
             // 
             this.utilisateurToolStripMenuItem.Name = "utilisateurToolStripMenuItem";
-            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
             this.utilisateurToolStripMenuItem.Text = "Utilisateur";
             this.utilisateurToolStripMenuItem.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
             // 
@@ -155,6 +155,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMDI";
             this.Text = "Application Gestion Location";
+            this.Load += new System.EventHandler(this.frmMDI_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

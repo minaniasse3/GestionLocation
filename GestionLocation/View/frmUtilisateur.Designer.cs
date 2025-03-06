@@ -62,7 +62,7 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(280, 515);
+            this.btnSupprimer.Location = new System.Drawing.Point(285, 536);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(111, 23);
             this.btnSupprimer.TabIndex = 40;
@@ -72,7 +72,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(144, 515);
+            this.btnModifier.Location = new System.Drawing.Point(149, 536);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(111, 23);
             this.btnModifier.TabIndex = 39;
@@ -82,7 +82,7 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(8, 515);
+            this.btnAjouter.Location = new System.Drawing.Point(13, 536);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(111, 23);
             this.btnAjouter.TabIndex = 37;
@@ -183,7 +183,7 @@
             // 
             // txtRccm
             // 
-            this.txtRccm.Location = new System.Drawing.Point(20, 478);
+            this.txtRccm.Location = new System.Drawing.Point(20, 475);
             this.txtRccm.Name = "txtRccm";
             this.txtRccm.Size = new System.Drawing.Size(325, 22);
             this.txtRccm.TabIndex = 44;
@@ -191,7 +191,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 458);
+            this.label6.Location = new System.Drawing.Point(17, 455);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 46;
@@ -199,7 +199,7 @@
             // 
             // txtNinea
             // 
-            this.txtNinea.Location = new System.Drawing.Point(20, 401);
+            this.txtNinea.Location = new System.Drawing.Point(20, 398);
             this.txtNinea.Name = "txtNinea";
             this.txtNinea.Size = new System.Drawing.Size(325, 22);
             this.txtNinea.TabIndex = 43;
@@ -207,7 +207,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 381);
+            this.label5.Location = new System.Drawing.Point(17, 378);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 16);
             this.label5.TabIndex = 45;
