@@ -74,6 +74,3 @@ C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\obj\Debug\Gestion
 C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\obj\Debug\GestionL.EFE4AC58.Up2Date
 C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\obj\Debug\GestionLocation.exe
 C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\obj\Debug\GestionLocation.pdb
-C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\bin\Debug\Newtonsoft.Json.dll
-C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\bin\Debug\Newtonsoft.Json.xml
-C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\GestionLocation\obj\Debug\GestionLocation.View.frmApp.resources
