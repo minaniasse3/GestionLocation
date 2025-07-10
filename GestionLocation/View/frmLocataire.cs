@@ -7,7 +7,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Services.Description;
 using System.Windows.Forms;
+
 
 namespace GestionLocation.View
 {
@@ -17,9 +19,8 @@ namespace GestionLocation.View
         {
             InitializeComponent();
         }
-
+        MetierGestionLocation.Service1Client service = new MetierGestionLocation.Service1Client();
         BdAppartementContext db = new BdAppartementContext();
-
         private void ResetForm()
         {
             txtCNI.Text = string.Empty;
@@ -33,13 +34,14 @@ namespace GestionLocation.View
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            Locataire L = new Locataire();
+            MetierGestionLocation.Locataire L = new MetierGestionLocation.Locataire();
             L.NomPrenom = txtNomPrenom.Text;
             L.Telephone = txtTel.Text;
             L.Email = txtEmail.Text;
             L.CNI = txtCNI.Text;
-            db.locataires.Add(L);
-            db.SaveChanges();
+            service.AddLocataire(L);
+            //db.locataires.Add(L);
+            //db.SaveChanges();
             ResetForm();
         }
 
@@ -54,21 +56,21 @@ namespace GestionLocation.View
         private void btnModifier_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgLocataire.CurrentRow.Cells[0].Value.ToString());
-            var p = db.locataires.Find(id);
+            var p = service.GetLocataireById(id);//db.locataires.Find(id);
             p.NomPrenom = txtNomPrenom.Text;
             p.Telephone = txtTel.Text;
             p.Email = txtEmail.Text;
             p.CNI = txtCNI.Text;
-            db.SaveChanges();
+            //db.SaveChanges();
+            service.UpdateLocataire(p);
             ResetForm();
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgLocataire.CurrentRow.Cells[0].Value.ToString());
-            var p = db.locataires.Find(id);
-            db.locataires.Remove(p);
-            db.SaveChanges();
+            var p = service.GetLocataireById(id);
+            service.DeleteLocataire(p); 
             ResetForm();
         }
 

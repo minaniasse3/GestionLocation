@@ -1,0 +1,7 @@
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Release\ServWinGroup1.exe.config
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Release\ServWinGroup1.exe
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Release\ServWinGroup1.pdb
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Release\ServWinGroup1.csproj.AssemblyReference.cache
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Release\ServWinGroup1.csproj.CoreCompileInputs.cache
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Release\ServWinGroup1.exe
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Release\ServWinGroup1.pdb

@@ -59,8 +59,8 @@ namespace GestionLocation.Utils
         {
             try
             {
-                GMailer.GmailUsername = "aliou.18.ndour@gmail.com";//System.Configuration.ConfigurationManager.AppSettings["Email"];
-                GMailer.GmailPassword = "lzgt jtok qwld jfsx";//System.Configuration.ConfigurationManager.AppSettings["PasswordEmail"];
+                GMailer.GmailUsername = "yacineniass00@gmail.com";//System.Configuration.ConfigurationManager.AppSettings["Email"];
+                GMailer.GmailPassword = "fhgf lvis wzvg ldoy";//System.Configuration.ConfigurationManager.AppSettings["PasswordEmail"];
 
                 GMailer mailer = new GMailer();
                 mailer.ToEmail = destinataire;

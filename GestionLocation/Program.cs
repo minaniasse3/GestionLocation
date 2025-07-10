@@ -30,7 +30,7 @@ namespace GestionLocation
                 admin = new Admin();
                 admin.NomPrenom = "Administrateur";
                 admin.Telephone = "784577474";
-                admin.Identiant = "Admin";
+                admin.Identifiant = "Admin";
                 admin.Email = "admin@yopmail.com";
                 admin.CNI = "0101010111";
                 db.Admins.Add(admin);

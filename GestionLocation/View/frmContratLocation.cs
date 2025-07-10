@@ -18,6 +18,7 @@ namespace GestionLocation.View
             InitializeComponent();
         }
 
+        MetierGestionLocation.Service1Client service = new MetierGestionLocation.Service1Client();
         BdAppartementContext db = new BdAppartementContext();
         private ContratLocation contratActuel;
         private void ResetForm()
@@ -52,8 +53,7 @@ namespace GestionLocation.View
 
         private List<ListSelectionViewModel> LoadCbbAppartement()
         {
-            var liste = db.appartements.ToList();
-
+            var liste = service.GetListeAppartement(null, null, null).ToList();
 
             List<ListSelectionViewModel> list = new List<ListSelectionViewModel>();
             ListSelectionViewModel a = new ListSelectionViewModel();
@@ -73,8 +73,7 @@ namespace GestionLocation.View
 
         private List<ListSelectionViewModel> LoadCbbLocataire()
         {
-            var liste = db.locataires.ToList();
-
+            var liste = service.GetListeLocataires().ToList();
 
             List<ListSelectionViewModel> list = new List<ListSelectionViewModel>();
             ListSelectionViewModel a = new ListSelectionViewModel();

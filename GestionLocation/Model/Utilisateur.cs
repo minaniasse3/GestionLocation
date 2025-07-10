@@ -11,7 +11,7 @@ namespace GestionLocation.Model
     {
         [ MaxLength(20)]
 
-        public string Identiant { get; set; }
+        public string Identifiant { get; set; }
 
         [MaxLength(512)]
 

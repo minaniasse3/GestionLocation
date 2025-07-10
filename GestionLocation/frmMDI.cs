@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GestionLocation.View;
+using Microsoft.VisualBasic.Devices;
 
 namespace GestionLocation
 {
@@ -130,6 +132,10 @@ namespace GestionLocation
                 securiteToolStripMenuItem.Visible = false;
 
             }
+            Computer myComputer = new Computer();
+            this.Width = myComputer.Screen.Bounds.Width;
+            this.Height = myComputer.Screen.Bounds.Height;
+            this.Location = new Point(0, 0);
         }
     }
 }

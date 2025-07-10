@@ -13,7 +13,8 @@ namespace GestionLocation.View
 {
     public partial class frmPaiement : Form
     {
-       BdAppartementContext db = new BdAppartementContext();
+        MetierGestionLocation.Service1Client service = new MetierGestionLocation.Service1Client();
+        BdAppartementContext db = new BdAppartementContext();
         private Paiement paiementSelectionne = null;
 
 
@@ -30,7 +31,7 @@ namespace GestionLocation.View
 
         private void ChargerModesPaiement()
         {
-            var modes = db.ModePaiements.ToList();
+            var modes = service.GetListeModePaiements().ToList();
             cbbModePaiement.DataSource = modes;
             cbbModePaiement.DisplayMember = "LibelleModePaiement";
             cbbModePaiement.ValueMember = "IdModePaiement";
@@ -38,7 +39,7 @@ namespace GestionLocation.View
 
         private void ChargerContrats()
         {
-            var contrats = db.ContratLocations.ToList();
+            var contrats = service.GetListeContratLocation(null).ToList();
             cbbContratLocation.DataSource = contrats;
             cbbContratLocation.DisplayMember = "Numero";
             cbbContratLocation.ValueMember = "IdContrat";
@@ -53,7 +54,7 @@ namespace GestionLocation.View
                 return;
             }
 
-            Paiement paiement = new Paiement
+            MetierGestionLocation.Paiement paiement = new MetierGestionLocation.Paiement
             {
                 DatePaiment = txtDatePaiement.Value,
                 Montant = float.Parse(txtMontant.Text),
@@ -62,9 +63,14 @@ namespace GestionLocation.View
                 IdContrat = (int)cbbContratLocation.SelectedValue
             };
 
-            db.Paiements.Add(paiement);
-            db.SaveChanges();
-            MessageBox.Show("Paiement enregistré avec succès !");
+            if (service.AddPaiement(paiement))
+            {
+                MessageBox.Show("Paiement enregistré avec succès !");
+            }
+            else
+            {
+                MessageBox.Show("Erreur lors de l'enregistrement du paiement !");
+            }
         }
 
         private void btnChoisir_Click(object sender, EventArgs e)
@@ -79,14 +85,24 @@ namespace GestionLocation.View
                 return;
             }
 
-            paiementSelectionne.DatePaiment = txtDatePaiement.Value;
-            paiementSelectionne.Montant = float.Parse(txtMontant.Text);
-            paiementSelectionne.NumeroFacture = txtNumero.Text;
-            paiementSelectionne.IdModePaiement = (int)cbbModePaiement.SelectedValue;
-            paiementSelectionne.IdContrat = (int)cbbContratLocation.SelectedValue;
+            MetierGestionLocation.Paiement paiement = new MetierGestionLocation.Paiement
+            {
+                IdPaiement = paiementSelectionne.IdPaiement,
+                DatePaiment = txtDatePaiement.Value,
+                Montant = float.Parse(txtMontant.Text),
+                NumeroFacture = txtNumero.Text,
+                IdModePaiement = (int)cbbModePaiement.SelectedValue,
+                IdContrat = (int)cbbContratLocation.SelectedValue
+            };
 
-            db.SaveChanges();
-            MessageBox.Show("Paiement modifié !");
+            if (service.UpdatePaiement(paiement))
+            {
+                MessageBox.Show("Paiement modifié !");
+            }
+            else
+            {
+                MessageBox.Show("Erreur lors de la modification du paiement !");
+            }
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
@@ -97,9 +113,19 @@ namespace GestionLocation.View
                 return;
             }
 
-            db.Paiements.Remove(paiementSelectionne);
-            db.SaveChanges();
-            MessageBox.Show("Paiement supprimé !");
+            MetierGestionLocation.Paiement paiement = new MetierGestionLocation.Paiement
+            {
+                IdPaiement = paiementSelectionne.IdPaiement
+            };
+
+            if (service.DeletePaiement(paiement))
+            {
+                MessageBox.Show("Paiement supprimé !");
+            }
+            else
+            {
+                MessageBox.Show("Erreur lors de la suppression du paiement !");
+            }
         }
     }
 }

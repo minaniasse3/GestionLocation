@@ -1,0 +1,26 @@
+﻿Installation de l'assembly 'C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.InstallLog
+   assemblypath = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe
+Aucun programme d'installation public avec l'attribut RunInstallerAttribute.Yes n'a été trouvé dans l'assembly C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe.
+Validation de l'assembly 'C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.InstallLog
+   assemblypath = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe
+Aucun programme d'installation public avec l'attribut RunInstallerAttribute.Yes n'a été trouvé dans l'assembly C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe.
+Suppression du fichier InstallState, car aucun programme d'installation n'est présent.
+Installation de l'assembly 'C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.InstallLog
+   assemblypath = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe
+Installation du service servicegroup1 en cours...
+Le service servicegroup1 a été installé avec succès.
+Création d'une source EventLog servicegroup1 dans le journal Application...
+Validation de l'assembly 'C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe'.
+Les paramètres affectés sont :
+   logtoconsole = 
+   logfile = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.InstallLog
+   assemblypath = C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe

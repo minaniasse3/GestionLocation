@@ -1,0 +1,9 @@
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe.config
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.exe
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\bin\Debug\ServWinGroup1.pdb
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.csproj.AssemblyReference.cache
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.csproj.CoreCompileInputs.cache
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.exe
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.pdb
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.ProjectInstaller.resources
+C:\Users\DELL 5420\L3GL\CSHARP\GestionLocation\ServWinGroup1\obj\Debug\ServWinGroup1.csproj.GenerateResource.cache

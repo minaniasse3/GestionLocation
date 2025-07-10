@@ -32,8 +32,6 @@
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.txtCNI = new System.Windows.Forms.TextBox();
-            this.CNI = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTel = new System.Windows.Forms.TextBox();
@@ -43,10 +41,6 @@
             this.dgUtilisateur = new System.Windows.Forms.DataGridView();
             this.txtIdentifiant = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtRccm = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNinea = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgUtilisateur)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +56,7 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(285, 536);
+            this.btnSupprimer.Location = new System.Drawing.Point(294, 460);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(111, 23);
             this.btnSupprimer.TabIndex = 40;
@@ -72,7 +66,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(149, 536);
+            this.btnModifier.Location = new System.Drawing.Point(158, 460);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(111, 23);
             this.btnModifier.TabIndex = 39;
@@ -82,7 +76,7 @@
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(13, 536);
+            this.btnAjouter.Location = new System.Drawing.Point(22, 460);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(111, 23);
             this.btnAjouter.TabIndex = 37;
@@ -90,28 +84,13 @@
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
-            // txtCNI
-            // 
-            this.txtCNI.Location = new System.Drawing.Point(20, 286);
-            this.txtCNI.Name = "txtCNI";
-            this.txtCNI.Size = new System.Drawing.Size(325, 22);
-            this.txtCNI.TabIndex = 34;
-            // 
-            // CNI
-            // 
-            this.CNI.AutoSize = true;
-            this.CNI.Location = new System.Drawing.Point(17, 266);
-            this.CNI.Name = "CNI";
-            this.CNI.Size = new System.Drawing.Size(29, 16);
-            this.CNI.TabIndex = 36;
-            this.CNI.Text = "CNI";
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(20, 209);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(325, 22);
             this.txtEmail.TabIndex = 33;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_MouseLeave);
             // 
             // label3
@@ -164,10 +143,11 @@
             this.dgUtilisateur.RowTemplate.Height = 24;
             this.dgUtilisateur.Size = new System.Drawing.Size(2029, 1227);
             this.dgUtilisateur.TabIndex = 28;
+            this.dgUtilisateur.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUtilisateur_CellContentClick);
             // 
             // txtIdentifiant
             // 
-            this.txtIdentifiant.Location = new System.Drawing.Point(20, 349);
+            this.txtIdentifiant.Location = new System.Drawing.Point(20, 364);
             this.txtIdentifiant.Name = "txtIdentifiant";
             this.txtIdentifiant.Size = new System.Drawing.Size(325, 22);
             this.txtIdentifiant.TabIndex = 41;
@@ -175,43 +155,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 329);
+            this.label4.Location = new System.Drawing.Point(19, 325);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 42;
             this.label4.Text = "Identifiant";
-            // 
-            // txtRccm
-            // 
-            this.txtRccm.Location = new System.Drawing.Point(20, 475);
-            this.txtRccm.Name = "txtRccm";
-            this.txtRccm.Size = new System.Drawing.Size(325, 22);
-            this.txtRccm.TabIndex = 44;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 455);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 16);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "RCCM";
-            // 
-            // txtNinea
-            // 
-            this.txtNinea.Location = new System.Drawing.Point(20, 398);
-            this.txtNinea.Name = "txtNinea";
-            this.txtNinea.Size = new System.Drawing.Size(325, 22);
-            this.txtNinea.TabIndex = 43;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 378);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 16);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Ninea";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // frmUtilisateur
             // 
@@ -220,18 +169,12 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1239, 701);
             this.ControlBox = false;
-            this.Controls.Add(this.txtRccm);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtNinea);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIdentifiant);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChoisir);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnAjouter);
-            this.Controls.Add(this.txtCNI);
-            this.Controls.Add(this.CNI);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTel);
@@ -254,8 +197,6 @@
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnAjouter;
-        private System.Windows.Forms.TextBox txtCNI;
-        private System.Windows.Forms.Label CNI;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTel;
@@ -265,9 +206,5 @@
         private System.Windows.Forms.DataGridView dgUtilisateur;
         private System.Windows.Forms.TextBox txtIdentifiant;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRccm;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNinea;
-        private System.Windows.Forms.Label label5;
     }
 }

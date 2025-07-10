@@ -24,7 +24,7 @@ namespace GestionLocation.View
         {
 
         }
-
+        MetierGestionLocation.Service1Client service = new MetierGestionLocation.Service1Client();
         BdAppartementContext db = new BdAppartementContext();
 
         private void ResetForm()
@@ -35,7 +35,7 @@ namespace GestionLocation.View
             txtNomPrenom.Text = string.Empty;
             txtRccm.Text = string.Empty;
             txtTel.Text = string.Empty;
-            dgProprietaire.DataSource = db.proprietaires.Select(a=> new { a.IdPersonne, a.NomPrenom, a.Telephone, a.CNI, a.Email, a.Ninea, a.Rccm }).ToList();
+            dgProprietaire.DataSource = service.GetListeProprietaires().Select(a=> new { a.IdPersonne, a.NomPrenom, a.Telephone, a.CNI, a.Email, a.Ninea, a.Rccm }).ToList();
             txtNomPrenom.Focus();
 
         }
@@ -48,15 +48,14 @@ namespace GestionLocation.View
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            Proprietaire p = new Proprietaire();
+            MetierGestionLocation.Proprietaire p = new MetierGestionLocation.Proprietaire();
             p.NomPrenom= txtNomPrenom.Text;
             p.Telephone = txtTel.Text;
             p.Email = txtEmail.Text;
             p.Rccm = txtRccm.Text;
             p.Ninea = txtNinea.Text;
             p.CNI = txtCNI.Text;
-            db.proprietaires.Add(p);
-            db.SaveChanges();
+            service.AddProprietaire(p);
             ResetForm();
         }
 
@@ -73,23 +72,25 @@ namespace GestionLocation.View
         private void btnModifier_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgProprietaire.CurrentRow.Cells[0].Value.ToString());
-            var p = db.proprietaires.Find(id);
+            var p = service.GetProprietaireById(id);//db.proprietaires.Find(id);
             p.NomPrenom = txtNomPrenom.Text;
             p.Telephone = txtTel.Text;
             p.Email = txtEmail.Text;
             p.Rccm = txtRccm.Text;
             p.Ninea = txtNinea.Text;
             p.CNI = txtCNI.Text;
-            db.SaveChanges();
+            service.UpdateProprietaire(p);
+            //db.SaveChanges();
             ResetForm();
         }
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             int id = int.Parse(dgProprietaire.CurrentRow.Cells[0].Value.ToString());
-            var p = db.proprietaires.Find(id);
-            db.proprietaires.Remove(p);
-            db.SaveChanges();
+            var p = service.GetProprietaireById(id);//db.proprietaires.Find(id);
+            //db.proprietaires.Remove(p);
+            service.DeleteProprietaire(p);
+            //db.SaveChanges();
             ResetForm();
         }
 

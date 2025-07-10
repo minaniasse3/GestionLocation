@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdappartement1ModelStoreContainer" CdmEntityContainer="bdappartement1Entities">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="bdappartement1Model.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="IdPersonne" ColumnName="IdPersonne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appartement">
+      <EntityTypeMapping TypeName="bdappartement1Model.Appartement">
+        <MappingFragment StoreEntitySet="Appartement">
+          <ScalarProperty Name="IdAppartement" ColumnName="IdAppartement" />
+          <ScalarProperty Name="AdresseAppartement" ColumnName="AdresseAppartement" />
+          <ScalarProperty Name="Surface" ColumnName="Surface" />
+          <ScalarProperty Name="Capacite" ColumnName="Capacite" />
+          <ScalarProperty Name="NombrePiece" ColumnName="NombrePiece" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+          <ScalarProperty Name="IdPropriataire" ColumnName="IdPropriataire" />
+          <ScalarProperty Name="IdTypeAppartement" ColumnName="IdTypeAppartement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContratLocation">
+      <EntityTypeMapping TypeName="bdappartement1Model.ContratLocation">
+        <MappingFragment StoreEntitySet="ContratLocation">
+          <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="DateDebut" ColumnName="DateDebut" />
+          <ScalarProperty Name="DateFin" ColumnName="DateFin" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="Montant" ColumnName="Montant" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+          <ScalarProperty Name="IdAppartement" ColumnName="IdAppartement" />
+          <ScalarProperty Name="IdLocataire" ColumnName="IdLocataire" />
+          <ScalarProperty Name="IdPaiement" ColumnName="IdPaiement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locataire">
+      <EntityTypeMapping TypeName="bdappartement1Model.Locataire">
+        <MappingFragment StoreEntitySet="Locataire">
+          <ScalarProperty Name="IdPersonne" ColumnName="IdPersonne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModePaiement">
+      <EntityTypeMapping TypeName="bdappartement1Model.ModePaiement">
+        <MappingFragment StoreEntitySet="ModePaiement">
+          <ScalarProperty Name="IdModePaiement" ColumnName="IdModePaiement" />
+          <ScalarProperty Name="LibelleMode" ColumnName="LibelleMode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paiement">
+      <EntityTypeMapping TypeName="bdappartement1Model.Paiement">
+        <MappingFragment StoreEntitySet="Paiement">
+          <ScalarProperty Name="IdPaiement" ColumnName="IdPaiement" />
+          <ScalarProperty Name="DatePaiment" ColumnName="DatePaiment" />
+          <ScalarProperty Name="Montant" ColumnName="Montant" />
+          <ScalarProperty Name="NumeroFacture" ColumnName="NumeroFacture" />
+          <ScalarProperty Name="IdModePaiement" ColumnName="IdModePaiement" />
+          <ScalarProperty Name="IdContrat" ColumnName="IdContrat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personne">
+      <EntityTypeMapping TypeName="bdappartement1Model.Personne">
+        <MappingFragment StoreEntitySet="Personne">
+          <ScalarProperty Name="IdPersonne" ColumnName="IdPersonne" />
+          <ScalarProperty Name="NomPrenom" ColumnName="NomPrenom" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CNI" ColumnName="CNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proprietaire">
+      <EntityTypeMapping TypeName="bdappartement1Model.Proprietaire">
+        <MappingFragment StoreEntitySet="Proprietaire">
+          <ScalarProperty Name="IdPersonne" ColumnName="IdPersonne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeAppartement">
+      <EntityTypeMapping TypeName="bdappartement1Model.TypeAppartement">
+        <MappingFragment StoreEntitySet="TypeAppartement">
+          <ScalarProperty Name="IdTypeAppartement" ColumnName="IdTypeAppartement" />
+          <ScalarProperty Name="LibelleType" ColumnName="LibelleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilisateur">
+      <EntityTypeMapping TypeName="bdappartement1Model.Utilisateur">
+        <MappingFragment StoreEntitySet="Utilisateur">
+          <ScalarProperty Name="IdPersonne" ColumnName="IdPersonne" />
+          <ScalarProperty Name="Identifiant" ColumnName="Identifiant" />
+          <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

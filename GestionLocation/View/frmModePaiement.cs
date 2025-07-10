@@ -13,7 +13,9 @@ namespace GestionLocation.View
 {
     public partial class frmModePaiement : Form
     {
+        MetierGestionLocation.Service1Client service = new MetierGestionLocation.Service1Client();
         BdAppartementContext db = new BdAppartementContext();
+
         private void ResetForm()
         {
             txtLibelleModePaiement.Text = string.Empty;
@@ -32,20 +34,22 @@ namespace GestionLocation.View
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            ModePaiement a = new ModePaiement();
+            MetierGestionLocation.ModePaiement a = new MetierGestionLocation.ModePaiement();
             a.LibelleModePaiement = txtLibelleModePaiement.Text;
-            db.ModePaiements.Add(a);
-            db.SaveChanges();
+            //db.ModePaiements.Add(a);
+            //db.SaveChanges();
+            service.AddModePaiement(a);
             ResetForm();
             MessageBox.Show("Mode de paiement ajouté !");
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            int? id = int.Parse(dgModePaiement.CurrentRow.Cells[0].Value.ToString());
-            var a = db.ModePaiements.Find(id);
+            int id = int.Parse(dgModePaiement.CurrentRow.Cells[0].Value.ToString());
+            var a = service.GetModePaiementById(id);
             a.LibelleModePaiement = txtLibelleModePaiement.Text;
-            db.SaveChanges();
+            //db.SaveChanges();
+            service.UpdateModePaiement(a);
             ResetForm();
             MessageBox.Show("Mode de paiement modifié !");
         }
@@ -53,12 +57,14 @@ namespace GestionLocation.View
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             int? id = int.Parse(dgModePaiement.CurrentRow.Cells[0].Value.ToString());
-            var a = db.ModePaiements.Find(id);
-            db.ModePaiements.Remove(a);
+            var a = service.GetModePaiementById(id); 
+            //db.ModePaiements.Remove(a);
+            service.DeleteModePaiement(a);
             db.SaveChanges();
             ResetForm();
             MessageBox.Show("Mode de paiement supprimé !");
         }
+      
 
         private void dgModePaiement_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

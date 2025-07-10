@@ -58,6 +58,7 @@
             this.dgAppartement.RowTemplate.Height = 24;
             this.dgAppartement.Size = new System.Drawing.Size(1214, 531);
             this.dgAppartement.TabIndex = 0;
+            this.dgAppartement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgAppartement_CellContentClick);
             // 
             // label1
             // 

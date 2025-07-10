@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdappartement1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="IdPersonne" />
+    </Key>
+    <Property Name="IdPersonne" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Utilisateur" Relationship="Self.FK__Admin__IdPersonn__3C69FB99" FromRole="Admin" ToRole="Utilisateur" />
+  </EntityType>
+  <EntityType Name="Appartement">
+    <Key>
+      <PropertyRef Name="IdAppartement" />
+    </Key>
+    <Property Name="IdAppartement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdresseAppartement" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surface" Type="Double" />
+    <Property Name="Capacite" Type="Double" />
+    <Property Name="NombrePiece" Type="Int32" />
+    <Property Name="Disponible" Type="Boolean" />
+    <Property Name="IdPropriataire" Type="Int32" />
+    <Property Name="IdTypeAppartement" Type="Int32" />
+    <NavigationProperty Name="Proprietaire" Relationship="Self.FK__Apparteme__IdPro__46E78A0C" FromRole="Appartement" ToRole="Proprietaire" />
+    <NavigationProperty Name="TypeAppartement" Relationship="Self.FK__Apparteme__IdTyp__47DBAE45" FromRole="Appartement" ToRole="TypeAppartement" />
+    <NavigationProperty Name="ContratLocation" Relationship="Self.FK__ContratLo__IdApp__4CA06362" FromRole="Appartement" ToRole="ContratLocation" />
+  </EntityType>
+  <EntityType Name="ContratLocation">
+    <Key>
+      <PropertyRef Name="IdContrat" />
+    </Key>
+    <Property Name="IdContrat" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Numero" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DateDebut" Type="DateTime" Precision="3" />
+    <Property Name="DateFin" Type="DateTime" Precision="3" />
+    <Property Name="DateCreation" Type="DateTime" Precision="3" />
+    <Property Name="Montant" Type="Double" />
+    <Property Name="Statut" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IdAppartement" Type="Int32" />
+    <Property Name="IdLocataire" Type="Int32" />
+    <Property Name="IdPaiement" Type="Int32" />
+    <NavigationProperty Name="Appartement" Relationship="Self.FK__ContratLo__IdApp__4CA06362" FromRole="ContratLocation" ToRole="Appartement" />
+    <NavigationProperty Name="Locataire" Relationship="Self.FK__ContratLo__IdLoc__4D94879B" FromRole="ContratLocation" ToRole="Locataire" />
+    <NavigationProperty Name="Paiement" Relationship="Self.FK__Paiement__IdCont__5165187F" FromRole="ContratLocation" ToRole="Paiement" />
+    <NavigationProperty Name="Paiement1" Relationship="Self.FK_ContratLocation_Paiement" FromRole="ContratLocation" ToRole="Paiement" />
+  </EntityType>
+  <EntityType Name="Locataire">
+    <Key>
+      <PropertyRef Name="IdPersonne" />
+    </Key>
+    <Property Name="IdPersonne" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ContratLocation" Relationship="Self.FK__ContratLo__IdLoc__4D94879B" FromRole="Locataire" ToRole="ContratLocation" />
+    <NavigationProperty Name="Personne" Relationship="Self.FK__Locataire__IdPer__4222D4EF" FromRole="Locataire" ToRole="Personne" />
+  </EntityType>
+  <EntityType Name="ModePaiement">
+    <Key>
+      <PropertyRef Name="IdModePaiement" />
+    </Key>
+    <Property Name="IdModePaiement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LibelleMode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Paiement" Relationship="Self.FK__Paiement__IdMode__5070F446" FromRole="ModePaiement" ToRole="Paiement" />
+  </EntityType>
+  <EntityType Name="Paiement">
+    <Key>
+      <PropertyRef Name="IdPaiement" />
+    </Key>
+    <Property Name="IdPaiement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DatePaiment" Type="DateTime" Precision="3" />
+    <Property Name="Montant" Type="Double" />
+    <Property Name="NumeroFacture" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IdModePaiement" Type="Int32" />
+    <Property Name="IdContrat" Type="Int32" />
+    <NavigationProperty Name="ContratLocation" Relationship="Self.FK__Paiement__IdCont__5165187F" FromRole="Paiement" ToRole="ContratLocation" />
+    <NavigationProperty Name="ContratLocation1" Relationship="Self.FK_ContratLocation_Paiement" FromRole="Paiement" ToRole="ContratLocation" />
+    <NavigationProperty Name="ModePaiement" Relationship="Self.FK__Paiement__IdMode__5070F446" FromRole="Paiement" ToRole="ModePaiement" />
+  </EntityType>
+  <EntityType Name="Personne">
+    <Key>
+      <PropertyRef Name="IdPersonne" />
+    </Key>
+    <Property Name="IdPersonne" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomPrenom" Type="String" MaxLength="160" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CNI" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Locataire" Relationship="Self.FK__Locataire__IdPer__4222D4EF" FromRole="Personne" ToRole="Locataire" />
+    <NavigationProperty Name="Proprietaire" Relationship="Self.FK__Proprieta__IdPer__3F466844" FromRole="Personne" ToRole="Proprietaire" />
+    <NavigationProperty Name="Utilisateur" Relationship="Self.FK__Utilisate__IdPer__398D8EEE" FromRole="Personne" ToRole="Utilisateur" />
+  </EntityType>
+  <EntityType Name="Proprietaire">
+    <Key>
+      <PropertyRef Name="IdPersonne" />
+    </Key>
+    <Property Name="IdPersonne" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Appartement" Relationship="Self.FK__Apparteme__IdPro__46E78A0C" FromRole="Proprietaire" ToRole="Appartement" />
+    <NavigationProperty Name="Personne" Relationship="Self.FK__Proprieta__IdPer__3F466844" FromRole="Proprietaire" ToRole="Personne" />
+  </EntityType>
+  <EntityType Name="TypeAppartement">
+    <Key>
+      <PropertyRef Name="IdTypeAppartement" />
+    </Key>
+    <Property Name="IdTypeAppartement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LibelleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Appartement" Relationship="Self.FK__Apparteme__IdTyp__47DBAE45" FromRole="TypeAppartement" ToRole="Appartement" />
+  </EntityType>
+  <EntityType Name="Utilisateur">
+    <Key>
+      <PropertyRef Name="IdPersonne" />
+    </Key>
+    <Property Name="IdPersonne" Type="Int32" Nullable="false" />
+    <Property Name="Identifiant" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MotDePasse" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="Statut" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Admin" Relationship="Self.FK__Admin__IdPersonn__3C69FB99" FromRole="Utilisateur" ToRole="Admin" />
+    <NavigationProperty Name="Personne" Relationship="Self.FK__Utilisate__IdPer__398D8EEE" FromRole="Utilisateur" ToRole="Personne" />
+  </EntityType>
+  <Association Name="FK__Admin__IdPersonn__3C69FB99">
+    <End Role="Utilisateur" Type="Self.Utilisateur" Multiplicity="1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateur">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="IdPersonne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apparteme__IdPro__46E78A0C">
+    <End Role="Proprietaire" Type="Self.Proprietaire" Multiplicity="0..1" />
+    <End Role="Appartement" Type="Self.Appartement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proprietaire">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="Appartement">
+        <PropertyRef Name="IdPropriataire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Apparteme__IdTyp__47DBAE45">
+    <End Role="TypeAppartement" Type="Self.TypeAppartement" Multiplicity="0..1" />
+    <End Role="Appartement" Type="Self.Appartement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeAppartement">
+        <PropertyRef Name="IdTypeAppartement" />
+      </Principal>
+      <Dependent Role="Appartement">
+        <PropertyRef Name="IdTypeAppartement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ContratLo__IdApp__4CA06362">
+    <End Role="Appartement" Type="Self.Appartement" Multiplicity="0..1" />
+    <End Role="ContratLocation" Type="Self.ContratLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appartement">
+        <PropertyRef Name="IdAppartement" />
+      </Principal>
+      <Dependent Role="ContratLocation">
+        <PropertyRef Name="IdAppartement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ContratLo__IdLoc__4D94879B">
+    <End Role="Locataire" Type="Self.Locataire" Multiplicity="0..1" />
+    <End Role="ContratLocation" Type="Self.ContratLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locataire">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="ContratLocation">
+        <PropertyRef Name="IdLocataire" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Paiement__IdCont__5165187F">
+    <End Role="ContratLocation" Type="Self.ContratLocation" Multiplicity="0..1" />
+    <End Role="Paiement" Type="Self.Paiement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContratLocation">
+        <PropertyRef Name="IdContrat" />
+      </Principal>
+      <Dependent Role="Paiement">
+        <PropertyRef Name="IdContrat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContratLocation_Paiement">
+    <End Role="Paiement" Type="Self.Paiement" Multiplicity="0..1" />
+    <End Role="ContratLocation" Type="Self.ContratLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paiement">
+        <PropertyRef Name="IdPaiement" />
+      </Principal>
+      <Dependent Role="ContratLocation">
+        <PropertyRef Name="IdPaiement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Locataire__IdPer__4222D4EF">
+    <End Role="Personne" Type="Self.Personne" Multiplicity="1" />
+    <End Role="Locataire" Type="Self.Locataire" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personne">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="Locataire">
+        <PropertyRef Name="IdPersonne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Paiement__IdMode__5070F446">
+    <End Role="ModePaiement" Type="Self.ModePaiement" Multiplicity="0..1" />
+    <End Role="Paiement" Type="Self.Paiement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModePaiement">
+        <PropertyRef Name="IdModePaiement" />
+      </Principal>
+      <Dependent Role="Paiement">
+        <PropertyRef Name="IdModePaiement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proprieta__IdPer__3F466844">
+    <End Role="Personne" Type="Self.Personne" Multiplicity="1" />
+    <End Role="Proprietaire" Type="Self.Proprietaire" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personne">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="Proprietaire">
+        <PropertyRef Name="IdPersonne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Utilisate__IdPer__398D8EEE">
+    <End Role="Personne" Type="Self.Personne" Multiplicity="1" />
+    <End Role="Utilisateur" Type="Self.Utilisateur" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Personne">
+        <PropertyRef Name="IdPersonne" />
+      </Principal>
+      <Dependent Role="Utilisateur">
+        <PropertyRef Name="IdPersonne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdappartement1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="Appartement" EntityType="Self.Appartement" />
+    <EntitySet Name="ContratLocation" EntityType="Self.ContratLocation" />
+    <EntitySet Name="Locataire" EntityType="Self.Locataire" />
+    <EntitySet Name="ModePaiement" EntityType="Self.ModePaiement" />
+    <EntitySet Name="Paiement" EntityType="Self.Paiement" />
+    <EntitySet Name="Personne" EntityType="Self.Personne" />
+    <EntitySet Name="Proprietaire" EntityType="Self.Proprietaire" />
+    <EntitySet Name="TypeAppartement" EntityType="Self.TypeAppartement" />
+    <EntitySet Name="Utilisateur" EntityType="Self.Utilisateur" />
+    <AssociationSet Name="FK__Admin__IdPersonn__3C69FB99" Association="Self.FK__Admin__IdPersonn__3C69FB99">
+      <End Role="Utilisateur" EntitySet="Utilisateur" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apparteme__IdPro__46E78A0C" Association="Self.FK__Apparteme__IdPro__46E78A0C">
+      <End Role="Proprietaire" EntitySet="Proprietaire" />
+      <End Role="Appartement" EntitySet="Appartement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Apparteme__IdTyp__47DBAE45" Association="Self.FK__Apparteme__IdTyp__47DBAE45">
+      <End Role="TypeAppartement" EntitySet="TypeAppartement" />
+      <End Role="Appartement" EntitySet="Appartement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ContratLo__IdApp__4CA06362" Association="Self.FK__ContratLo__IdApp__4CA06362">
+      <End Role="Appartement" EntitySet="Appartement" />
+      <End Role="ContratLocation" EntitySet="ContratLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ContratLo__IdLoc__4D94879B" Association="Self.FK__ContratLo__IdLoc__4D94879B">
+      <End Role="Locataire" EntitySet="Locataire" />
+      <End Role="ContratLocation" EntitySet="ContratLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Paiement__IdCont__5165187F" Association="Self.FK__Paiement__IdCont__5165187F">
+      <End Role="ContratLocation" EntitySet="ContratLocation" />
+      <End Role="Paiement" EntitySet="Paiement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContratLocation_Paiement" Association="Self.FK_ContratLocation_Paiement">
+      <End Role="Paiement" EntitySet="Paiement" />
+      <End Role="ContratLocation" EntitySet="ContratLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Locataire__IdPer__4222D4EF" Association="Self.FK__Locataire__IdPer__4222D4EF">
+      <End Role="Personne" EntitySet="Personne" />
+      <End Role="Locataire" EntitySet="Locataire" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Paiement__IdMode__5070F446" Association="Self.FK__Paiement__IdMode__5070F446">
+      <End Role="ModePaiement" EntitySet="ModePaiement" />
+      <End Role="Paiement" EntitySet="Paiement" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proprieta__IdPer__3F466844" Association="Self.FK__Proprieta__IdPer__3F466844">
+      <End Role="Personne" EntitySet="Personne" />
+      <End Role="Proprietaire" EntitySet="Proprietaire" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Utilisate__IdPer__398D8EEE" Association="Self.FK__Utilisate__IdPer__398D8EEE">
+      <End Role="Personne" EntitySet="Personne" />
+      <End Role="Utilisateur" EntitySet="Utilisateur" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
